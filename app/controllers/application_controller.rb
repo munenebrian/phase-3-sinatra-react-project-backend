@@ -5,34 +5,34 @@ class ApplicationController < Sinatra::Base
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
- # ALL ASSIGNMENTS
- get '/assignments' do
-  assignment =Assignment.all
-  assignment.to_json
-end
+  
+  get '/assignments' do
+    assignment =Assignment.all
+    assignment.to_json
+  end
 
-delete "/assignments/:id" do
-  assignment = Assignment.find(params[:id])
-  assignment.destroy
-  assignment.to_json
-end
+  delete "/assignments/:id" do
+    assignment = Assignment.find(params[:id])
+    assignment.destroy
+    assignment.to_json
+  end
 
-post "/assignments" do
-  assignment = Assignment.create(
-    title: params[:title],
-    body: params[:body],
-    authors_id: params[:authors_id],
-    categories_id: params[:categories_id]
-  )
-  assignment.to_json
-end
+  post "/assignments" do
+    assignment = Assignment.create(
+     title: params[:title],
+     body: params[:body],
+     authors_id: params[:authors_id],
+     categories_id: params[:categories_id]
+    )
+    assignment.to_json
+  end
 
-patch "/assignments/:id" do
-  assignment = Assignment.find(params[:id])
-  assignment.update(
-    title: params[:title],
-    body: params[:body]
-  )
-end
+  patch "/assignments/:id" do
+    assignment = Assignment.find(params[:id])
+    assignment.update(
+     title: params[:title],
+     body: params[:body]
+    )
+  end
 
 end
