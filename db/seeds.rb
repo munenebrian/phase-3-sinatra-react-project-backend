@@ -2,7 +2,7 @@ puts "🌱 Seeding spices..."
 
 # Seed your database here
 # Create Authors
-#
+
 author1 = Author.create(name: 'Brian Munene')
 author2 = Author.create(name: 'Lorenah Mbogo')
 author3 = Author.create(name: 'Martin Mwangi')
@@ -14,12 +14,14 @@ author8 = Author.create(name: 'Faith Murithi')
 author9 = Author.create(name: 'Job Sidney')
 author10 = Author.create(name: 'Sam Maingi')
 #Create Categories
+
 category1 = Category.create(name: "Tech support")
 category2 = Category.create(name: "Finance support")
 category3 = Category.create(name: "Client support")
 category4 = Category.create(name: "Leads")
 category5 = Category.create(name: "Manual Labour")
 #Create Works
+
 work1 = Work.create(
   title: "Getting Finance Aid",
   authors_id: author3.id,
