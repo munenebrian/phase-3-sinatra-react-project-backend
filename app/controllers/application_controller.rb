@@ -5,13 +5,13 @@ class ApplicationController < Sinatra::Base
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
- # ALL INSPIRATIONS
+ # ALL ASSIGNMENTS
  get '/assignments' do
   assignment =Assignment.all
   assignment.to_json
 end
 
-# ALL INSPIRATIONS AUTHORS
+# ALL WORK ASSIGNED
 get '/workassigned' do
   workassigned =Workassigned.all
   workassigned.to_json
