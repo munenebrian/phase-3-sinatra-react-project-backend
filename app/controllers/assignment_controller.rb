@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
 # ALL POEMS
  get '/works' do
   works = Work.all
- works.to_json
+  works.to_json
 
  end
 
@@ -30,5 +30,5 @@ class ApplicationController < Sinatra::Base
     body: params[:body]
   )
  end
- 
+
 end
