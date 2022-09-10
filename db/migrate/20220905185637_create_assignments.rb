@@ -1,6 +1,6 @@
-class CreatePoems < ActiveRecord::Migration[6.1]
+class CreateInspirations < ActiveRecord::Migration[6.1]
   def change
-    create_table :works do |t|
+    create_table :assignments do |t|
       t.string :title
       t.integer :authors_id
       t.integer :categories_id
