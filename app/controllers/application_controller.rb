@@ -11,13 +11,6 @@ class ApplicationController < Sinatra::Base
   assignment.to_json
 end
 
-# ALL WORK ASSIGNED
-get '/workassigned' do
-  workassigned =Workassigned.all
-  workassigned.to_json
-end
-
-
 delete "/assignments/:id" do
   assignment = Assignment.find(params[:id])
   assignment.destroy
