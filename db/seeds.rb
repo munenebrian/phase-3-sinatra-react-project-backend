@@ -52,27 +52,33 @@ work5 = Work.create(
 assignment1 = Assignment.create(
   title: "Follow Up on deployment",
   authors_id: author1.id,
-  categories_id: category1.id
+  categories_id: category1.id,
+  body: "make sure the applications are deployed"
 )
 assignment2 = Assignment.create(
   title: "Clean First-floor",
   authors_id: author10.id,
-  categories_id: category5.id
+  categories_id: category5.id,
+  body: "clean the first-floor and second-floor"
+
 )
 assignment3 = Assignment.create(
   title: "Contact Safaricom",
   authors_id: author2.id,
-  categories_id: category3.id
+  categories_id: category3.id,
+  body: "make sure to get the patnership they were offering"
 )
 assignment4 = Assignment.create(
   title: "Pay Interns",
   authors_id: author8.id,
-  categories_id: category2.id
+  categories_id: category2.id,
+  body: "make payment to the interns and recruit the best two"
 )
 assignment5 = Assignment.create(
   title: "Hold Managerial Meeting",
   authors_id: author6.id,
-  categories_id: category4.id
+  categories_id: category4.id,
+  body: "pitch a new system idea, get a new assistant manager"
 )
 
 puts "✅ Done seeding!"
